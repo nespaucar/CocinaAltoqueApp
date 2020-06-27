@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.serviflashapp.recipesserviflashapp.MainActivity;
 import com.serviflashapp.recipesserviflashapp.R;
 import com.serviflashapp.recipesserviflashapp.adapters.RecipeAdapter;
 import com.serviflashapp.recipesserviflashapp.models.Recipe;
@@ -25,9 +26,10 @@ public class RecipesListFragment extends Fragment {
     private Activity context;
     private RecipeAdapter recipeAdapter;
     private LinearLayoutManager recipeManager;
+    private MainActivity mainActivity;
 
-    public RecipesListFragment() {
-        // Required empty public constructor
+    public RecipesListFragment(MainActivity mainActivity) {
+        this.mainActivity = mainActivity;
     }
 
     @Override
@@ -42,8 +44,8 @@ public class RecipesListFragment extends Fragment {
         context = getActivity();
         recipesList = new ArrayList<Recipe>();
         getRecipes();
-        recipesRecycler = (RecyclerView) view.findViewById(R.id.recipesRecycler);
-        recipeAdapter = new RecipeAdapter(recipesList, context);
+        recipesRecycler = view.findViewById(R.id.recipesRecycler);
+        recipeAdapter = new RecipeAdapter(recipesList, context, mainActivity);
         recipesRecycler.setAdapter(recipeAdapter);
         recipeManager = new GridLayoutManager(context, 1);
         recipesRecycler.setLayoutManager(recipeManager);

@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/all"
+    <item
+        android:id="@+id/casa"
         android:icon="@drawable/ic_all"
         android:title="Todos"
         tools:ignore="HardcodedText" />
-    <item android:id="@+id/recent"
+    <item
+        android:id="@+id/latests"
         android:icon="@drawable/ic_recent"
         android:title="Recientes"
         tools:ignore="HardcodedText" />
-    <item android:id="@+id/favorites"
+    <item
+        android:id="@+id/favorites"
         android:icon="@drawable/ic_favorite"
         android:title="Favoritos"
         tools:ignore="HardcodedText" />
-    <item android:id="@+id/radio"
+    <item
+        android:id="@+id/radio"
         android:icon="@drawable/ic_radio"
         android:title="Radio"
         tools:ignore="HardcodedText" />

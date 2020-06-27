@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.serviflashapp.recipesserviflashapp.MainActivity;
 import com.serviflashapp.recipesserviflashapp.R;
 import com.serviflashapp.recipesserviflashapp.adapters.CategoryAdapter;
 import com.serviflashapp.recipesserviflashapp.models.Category;
@@ -24,9 +25,10 @@ public class HomeFragment extends Fragment {
     private Activity context;
     private CategoryAdapter categoryAdapter;
     private GridLayoutManager categoryManager;
+    private MainActivity mainActivity;
 
-    public HomeFragment() {
-        // Required empty public constructor
+    public HomeFragment(MainActivity mainActivity) {
+        this.mainActivity = mainActivity;
     }
 
     @Override
@@ -41,8 +43,8 @@ public class HomeFragment extends Fragment {
         context = getActivity();
         categoriesList = new ArrayList<Category>();
         getCategories();
-        categoriesRecycler = (RecyclerView) view.findViewById(R.id.categoriesRecycler);
-        categoryAdapter = new CategoryAdapter(categoriesList, context);
+        categoriesRecycler = view.findViewById(R.id.categoriesRecycler);
+        categoryAdapter = new CategoryAdapter(categoriesList, context, mainActivity);
         categoriesRecycler.setAdapter(categoryAdapter);
         categoryManager = new GridLayoutManager(context, 2);
         categoryManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {

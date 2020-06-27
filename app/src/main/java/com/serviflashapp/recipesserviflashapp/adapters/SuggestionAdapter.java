@@ -10,6 +10,7 @@ import android.widget.Filterable;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.serviflashapp.recipesserviflashapp.MainActivity;
 import com.serviflashapp.recipesserviflashapp.R;
 import com.serviflashapp.recipesserviflashapp.models.Suggestion;
 
@@ -19,11 +20,13 @@ public class SuggestionAdapter extends RecyclerView.Adapter<SuggestionAdapter.Vi
     private ArrayList<Suggestion> suggestion;
     private ArrayList<Suggestion> suggestionfull;
     private Context context;
+    private MainActivity mainActivity;
 
-    public SuggestionAdapter(ArrayList<Suggestion> suggestion, Context context) {
+    public SuggestionAdapter(ArrayList<Suggestion> suggestion, Context context, MainActivity mainActivity) {
         this.suggestion = suggestion;
         this.suggestionfull = new ArrayList<Suggestion>(suggestion);
         this.context = context;
+        this.mainActivity = mainActivity;
     }
 
     @NonNull

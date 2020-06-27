@@ -35,21 +35,20 @@ public class SuggestionActivity extends AppCompatActivity {
         este = this;
 
         listaSuggestions = new ArrayList<Suggestion>();
-        recyclerSuggestions = (RecyclerView) findViewById(R.id.recycler_suggestions);
-        progress = (ProgressBar) findViewById(R.id.changing);
+        recyclerSuggestions = findViewById(R.id.recycler_suggestions);
+        progress = findViewById(R.id.changing);
         progress.setVisibility(View.GONE);
         recyclerSuggestions.setVisibility(View.VISIBLE);
-        getRecipes("");
-    }
-
-    private void getRecipes(final String filtro) {
 
         listaSuggestions = new ArrayList<Suggestion>();
-        adapterSuggestions = new SuggestionAdapter(listaSuggestions, este);
+        getRecipes("");
+        adapterSuggestions = new SuggestionAdapter(listaSuggestions, este, null);
         managerSuggestions = new GridLayoutManager(this, 1);
         recyclerSuggestions.setLayoutManager(managerSuggestions);
         recyclerSuggestions.setAdapter(adapterSuggestions);
+    }
 
+    private void getRecipes(final String filtro) {
         listaSuggestions.add(new Suggestion());
         listaSuggestions.add(new Suggestion());
         listaSuggestions.add(new Suggestion());

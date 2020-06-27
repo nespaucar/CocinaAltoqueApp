@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,6 +15,7 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.ProgressBar;
 
+import com.serviflashapp.recipesserviflashapp.MainActivity;
 import com.serviflashapp.recipesserviflashapp.R;
 import com.serviflashapp.recipesserviflashapp.adapters.SearchRecipeAdapter;
 import com.serviflashapp.recipesserviflashapp.models.Recipe;
@@ -36,21 +38,20 @@ public class SearchRecipeActivity extends AppCompatActivity {
         este = this;
 
         listaRecipes = new ArrayList<Recipe>();
-        recyclerRecipes = (RecyclerView) findViewById(R.id.recycler_recipes);
-        progress = (ProgressBar) findViewById(R.id.changing);
+        recyclerRecipes = findViewById(R.id.recycler_recipes);
+        progress = findViewById(R.id.changing);
         progress.setVisibility(View.GONE);
         recyclerRecipes.setVisibility(View.VISIBLE);
-        getRecipes("");
-    }
-
-    private void getRecipes(final String filtro) {
 
         listaRecipes = new ArrayList<Recipe>();
-        adapterRecipes = new SearchRecipeAdapter(listaRecipes, este);
+        getRecipes("");
+        adapterRecipes = new SearchRecipeAdapter(listaRecipes, este, null);
         managerRecipes = new GridLayoutManager(this, 1);
         recyclerRecipes.setLayoutManager(managerRecipes);
         recyclerRecipes.setAdapter(adapterRecipes);
+    }
 
+    private void getRecipes(final String filtro) {
         listaRecipes.add(new Recipe());
         listaRecipes.add(new Recipe());
         listaRecipes.add(new Recipe());

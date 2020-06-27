@@ -1,7 +1,6 @@
 <!--?xml version="1.0" encoding="UTF-8"?-->
 <resources>
     <color name="primaryColor">#F6DC8D</color>
-    <color name="primaryLightColor">#ffffe5</color>
     <color name="primaryDarkColor">#ED965B</color>
     <color name="primaryTextColor">#000000</color>
     <color name="themeColor">#C55A11</color>
@@ -9,4 +8,6 @@
     <color name="grasasColor">#FFC597</color>
     <color name="hidratosColor">#EF524D</color>
     <color name="proteinasColor">#A5D944</color>
+
+    <color name="transparentColor">#cccccc</color>
 </resources>

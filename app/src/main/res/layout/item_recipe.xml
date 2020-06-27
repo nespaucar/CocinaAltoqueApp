@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat
-    android:id="@+id/etiBook"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/categoryLinear"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardRecipe"
         android:layout_margin="15sp"
         app:cardElevation="10sp"
         android:layout_width="match_parent"
@@ -191,7 +189,7 @@
                         android:background="?android:selectableItemBackground"
                         android:gravity="bottom"
                         android:padding="15sp"
-                        android:src="@drawable/ic_favorite" />
+                        android:src="@drawable/ic_favorite_active" />
                 </androidx.appcompat.widget.LinearLayoutCompat>
             </RelativeLayout>
 

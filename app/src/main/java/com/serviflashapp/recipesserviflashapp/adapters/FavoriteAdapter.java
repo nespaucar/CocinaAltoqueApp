@@ -18,25 +18,25 @@ import com.serviflashapp.recipesserviflashapp.models.Recipe;
 
 import java.util.ArrayList;
 
-public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolderRecipe> {
+public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.ViewHolderFavorite> {
     private ArrayList<Recipe> recipeList;
     private Context context;
     private MainActivity mainActivity;
 
-    public RecipeAdapter(ArrayList<Recipe> recipeList, Context context, MainActivity mainActivity) {
+    public FavoriteAdapter(ArrayList<Recipe> recipeList, Context context, MainActivity mainActivity) {
         this.recipeList = recipeList;
         this.context = context;
         this.mainActivity = mainActivity;
     }
 
     @Override
-    public ViewHolderRecipe onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolderFavorite onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_recipe, null, false);
-        return new ViewHolderRecipe(view);
+        return new ViewHolderFavorite(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolderRecipe holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolderFavorite holder, int position) {
         holder.setOnClickListeners();
     }
 
@@ -45,11 +45,11 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
         return recipeList.size();
     }
 
-    public class ViewHolderRecipe extends RecyclerView.ViewHolder implements View.OnClickListener {
+    public class ViewHolderFavorite extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         private LinearLayoutCompat categotyLinear;
 
-        public ViewHolderRecipe(@NonNull View itemView) {
+        public ViewHolderFavorite(@NonNull View itemView) {
             super(itemView);
             categotyLinear = itemView.findViewById(R.id.categoryLinear);
         }

@@ -13,8 +13,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.google.android.material.textview.MaterialTextView;
+import com.serviflashapp.recipesserviflashapp.MainActivity;
 import com.serviflashapp.recipesserviflashapp.R;
 import com.serviflashapp.recipesserviflashapp.activities.RecipeActivity;
+import com.serviflashapp.recipesserviflashapp.fragments.RecipesListFragment;
 import com.serviflashapp.recipesserviflashapp.models.Category;
 
 import java.util.ArrayList;
@@ -22,10 +24,12 @@ import java.util.ArrayList;
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHolderCategory> {
     private ArrayList<Category> categoryList;
     private Context context;
+    private MainActivity mainActivity;
 
-    public CategoryAdapter(ArrayList<Category> categoryList, Context context) {
+    public CategoryAdapter(ArrayList<Category> categoryList, Context context, MainActivity mainActivity) {
         this.categoryList = categoryList;
         this.context = context;
+        this.mainActivity = mainActivity;
     }
 
     @Override
@@ -67,10 +71,10 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
 
         public ViewHolderCategory(@NonNull View itemView) {
             super(itemView);
-            cantText = (MaterialTextView) itemView.findViewById(R.id.cantText);
-            nameText = (MaterialTextView) itemView.findViewById(R.id.nameText);
-            categoryImage = (ImageView) itemView.findViewById(R.id.categoryImage);
-            categoryLinear = (LinearLayoutCompat) itemView.findViewById(R.id.categoryLinear);
+            cantText = itemView.findViewById(R.id.cantText);
+            nameText = itemView.findViewById(R.id.nameText);
+            categoryImage = itemView.findViewById(R.id.categoryImage);
+            categoryLinear = itemView.findViewById(R.id.categoryLinear);
         }
 
         public void setOnClickListeners() {
@@ -82,9 +86,15 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
             final int position = getAdapterPosition();
             switch (v.getId()) {
                 case R.id.categoryLinear:
-                    Intent intent = new Intent(context, RecipeActivity.class);
-                    context.startActivity(intent);
-                    Animatoo.animateWindmill(context);
+                    if(position == 0) {
+                        Intent intent = new Intent(context, RecipeActivity.class);
+                        context.startActivity(intent);
+                        Animatoo.animateWindmill(context);
+                    } else {
+                        mainActivity.changeFragment(new RecipesListFragment(mainActivity));
+                    }
+                    break;
+                case R.id.nav_reload:
                     break;
             }
         }

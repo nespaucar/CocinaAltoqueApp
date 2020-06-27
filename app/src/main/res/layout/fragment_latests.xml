@@ -12,7 +12,7 @@
         android:background="@drawable/shadow_top"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recipesRecycler"
+        android:id="@+id/latestsRecycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
