@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/fondo0">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:background="@android:color/white">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/nav_volver"
+                android:layout_width="50sp"
+                android:layout_height="match_parent"
+                android:background="?android:selectableItemBackground"
+                android:src="@drawable/ic_back" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:fontFamily="@font/biryani"
+                android:text="APORTAR RECETA"
+                android:textColor="@color/themeColor"
+                android:textSize="15sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@id/toolbar"
+        android:background="@drawable/shadow_top"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:scrollbarFadeDuration="0"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.cardview.widget.CardView
+                android:layout_margin="15sp"
+                android:padding="10sp"
+                app:cardElevation="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:paddingEnd="15sp"
+                        android:paddingStart="15sp"
+                        android:paddingBottom="15sp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="10sp"
+                            android:text="Nombre de platillo"
+                            android:fontFamily="@font/biryani"
+                            android:textSize="13sp"
+                            android:textColor="@color/themeColor"
+                            android:layout_height="wrap_content"/>
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:fontFamily="@font/biryani"
+                            android:hint="Digita el nombre del platillo"
+                            android:textSize="13sp"
+                            app:backgroundTint="@android:color/white"
+                            android:textColor="@color/primaryTextColor"
+                            android:layout_height="wrap_content"
+                            app:drawableTint="@color/themeColor"/>
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="5sp"
+                            android:fontFamily="@font/biryani"
+                            android:textSize="13sp"
+                            android:textColor="@color/themeColor"
+                            android:text="Ingredientes"
+                            android:layout_height="wrap_content"/>
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:fontFamily="@font/biryani"
+                            android:textSize="13sp"
+                            app:backgroundTint="@android:color/white"
+                            android:inputType="textMultiLine"
+                            android:hint="Digita los ingredientes"
+                            android:textColor="@color/primaryTextColor"
+                            android:layout_marginBottom="5sp"
+                            app:drawableTint="@color/themeColor"
+                            android:layout_height="wrap_content"/>
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="5sp"
+                            android:fontFamily="@font/biryani"
+                            android:textSize="13sp"
+                            android:inputType="textMultiLine"
+                            android:textColor="@color/themeColor"
+                            android:text="Preparación"
+                            android:layout_height="wrap_content"/>
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:fontFamily="@font/biryani"
+                            android:textSize="13sp"
+                            app:backgroundTint="@android:color/white"
+                            android:hint="Digita la preparación"
+                            android:textColor="@color/primaryTextColor"
+                            android:layout_marginBottom="5sp"
+                            app:drawableTint="@color/themeColor"
+                            android:layout_height="wrap_content"/>
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:fontFamily="@font/biryani_extralight"
+                            android:textColor="@color/primaryTextColor"
+                            android:textSize="13sp"
+                            app:counterEnabled="true"
+                            app:counterMaxLength="20"
+                            android:text="Recuerda que:\n   - Esta receta será revisada por los administradores antes de se publicada oficialmente.\n   - Sé educado y serio al enviar contenido. Tu aporte será beneficioso para otras personas.\n   - Las personas podrán ver que el autor de esa receta eres tú, ya que tu nombre lo has registrado.\n   - Te notificaremos mediante un correo electrónico cuando tu receta haya sido aprobada."
+                            android:layout_height="wrap_content"/>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_marginTop="10sp"
+                            android:layout_width="match_parent"
+                            android:text="ENVIAR"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/biryani"
+                            app:elevation="5sp"
+                            app:backgroundTint="@color/primaryDarkColor"
+                            android:textColor="@android:color/white"
+                            android:layout_height="wrap_content"/>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.cardview.widget.CardView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

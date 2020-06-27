@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:id="@+id/categoryLinear"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Media -->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/plato"
+            android:layout_margin="5sp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/categoryImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_marginTop="30sp"
+            android:layout_marginStart="50sp"
+            android:layout_marginBottom="5sp"
+            android:layout_marginEnd="50sp"
+            android:src="@drawable/carnes"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/categoryImage"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="15sp"
+                    android:layout_height="15sp"
+                    android:layout_gravity="center"
+                    android:foregroundGravity="center"
+                    android:src="@drawable/ic_categories_dark" />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="15sp"
+                    android:layout_height="15sp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="5sp"
+                    android:layout_marginRight="5sp"
+                    android:foregroundGravity="center"
+                    android:src="@drawable/ic_fork" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/cantText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/biryani_extralight"
+                    android:gravity="center"
+                    android:text="10 RECETAS"
+                    android:textColor="@color/themeColor"
+                    android:textSize="10sp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/nameText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/themeColor"
+                android:layout_weight="1"
+                android:fontFamily="@font/biryani"
+                android:gravity="center"
+                android:text="Sopas"
+                android:textSize="15sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </RelativeLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

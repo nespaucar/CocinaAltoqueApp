@@ -1,0 +1,793 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/fondo0">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:background="@android:color/white">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/nav_volver"
+                android:layout_width="50sp"
+                android:layout_height="match_parent"
+                android:background="?android:selectableItemBackground"
+                android:src="@drawable/ic_back" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:fontFamily="@font/biryani"
+                android:text="RECETA"
+                android:textColor="@color/themeColor"
+                android:textSize="15sp" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/nav_share"
+                android:layout_width="50sp"
+                android:layout_height="match_parent"
+                android:background="?android:selectableItemBackground"
+                android:src="@drawable/ic_share_theme" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/nav_share_select"
+                android:layout_width="50sp"
+                android:layout_height="match_parent"
+                android:background="?android:selectableItemBackground"
+                android:src="@drawable/ic_search" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@id/toolbar"
+        android:background="@drawable/shadow_top"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:scrollbarFadeDuration="0"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.cardview.widget.CardView
+                android:layout_margin="15sp"
+                app:cardElevation="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/i1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5sp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/biryani"
+                                android:text="Arroz Chaufa"
+                                android:textColor="@android:color/black"
+                                android:textSize="14sp" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/biryani_extralight"
+                                android:text="con mariscos y huantán frito"
+                                android:textColor="@android:color/black"
+                                android:textSize="11sp" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5sp"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="end"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="18sp"
+                                    android:layout_height="18sp"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/staractive" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="18sp"
+                                    android:layout_height="18sp"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/staractive" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="18sp"
+                                    android:layout_height="18sp"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/staractive" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="18sp"
+                                    android:layout_height="18sp"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/staractive" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="18sp"
+                                    android:layout_height="18sp"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/starinactive" />
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/biryani"
+                                android:gravity="end"
+                                android:text="40 votos"
+                                android:textColor="@android:color/black"
+                                android:textSize="10sp" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/recipeImage"
+                        android:layout_below="@id/i1"
+                        android:layout_width="match_parent"
+                        android:adjustViewBounds="true"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/chaufa"/>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_below="@id/recipeImage"
+                        android:layout_marginTop="5sp"
+                        android:layout_margin="5sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_weight="2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="18sp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_watch"
+                                android:layout_marginRight="5sp"
+                                android:layout_height="18sp"/>
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:textSize="12sp"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/biryani_extralight"
+                                android:layout_gravity="center"
+                                android:layout_height="wrap_content"
+                                android:text="40 min"/>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="12sp"
+                                android:textColor="@android:color/black"
+                                android:layout_marginEnd="2sp"
+                                android:layout_marginRight="2sp"
+                                android:fontFamily="@font/biryani_extralight"
+                                android:text="Dificultad"/>
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="23sp"
+                                android:padding="2sp"
+                                android:src="@drawable/cucharaactiva"
+                                android:layout_height="23sp"/>
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="23sp"
+                                android:padding="2sp"
+                                android:src="@drawable/cucharaactiva"
+                                android:layout_height="23sp"/>
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="23sp"
+                                android:padding="2sp"
+                                android:src="@drawable/cucharainactiva"
+                                android:layout_height="23sp"/>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_weight="2"
+                            android:layout_gravity="center"
+                            android:gravity="end"
+                            android:textSize="12sp"
+                            android:textColor="@android:color/black"
+                            android:fontFamily="@font/biryani_extralight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Kcal: 280"/>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_margin="15sp"
+                app:cardElevation="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@id/a1"
+                        android:padding="5sp"
+                        android:background="@color/themeColor"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="?attr/actionBarSize"
+                        android:orientation="horizontal">
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="60sp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/balanza"/>
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/biryani"
+                            android:textSize="13sp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:layout_height="wrap_content"
+                            android:text="Información\nnutricional por ración"/>
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:layout_width="45sp"
+                            android:adjustViewBounds="true"
+                            android:layout_height="match_parent"
+                            android:background="?android:selectableItemBackground"
+                            android:src="@drawable/ic_expand_more"/>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_below="@+id/a1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <lecho.lib.hellocharts.view.PieChartView
+                            android:layout_width="120sp"
+                            android:layout_margin="5sp"
+                            android:layout_height="120sp"/>
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/biryani"
+                                android:textSize="14sp"
+                                android:textColor="@color/grasasColor"
+                                android:text="Grasas: 35% - 10g (90Kcal)"/>
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/biryani"
+                                android:textSize="14sp"
+                                android:textColor="@color/hidratosColor"
+                                android:text="Grasas: 55% - 35g (140Kcal)"/>
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/biryani"
+                                android:textSize="14sp"
+                                android:textColor="@color/proteinasColor"
+                                android:text="Grasas: 9% - 6g (54Kcal)"/>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_margin="15sp"
+                app:cardElevation="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@id/a1"
+                        android:padding="5sp"
+                        android:background="@color/themeColor"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="?attr/actionBarSize"
+                        android:orientation="horizontal">
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="60sp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ingredientes"/>
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/biryani"
+                            android:textSize="13sp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:layout_height="wrap_content"
+                            android:text="Ingredientes"/>
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:layout_width="45sp"
+                            android:adjustViewBounds="true"
+                            android:layout_height="match_parent"
+                            android:background="?android:selectableItemBackground"
+                            android:src="@drawable/ic_expand_more"/>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_below="@+id/a1"
+                        android:layout_width="match_parent"
+                        android:layout_margin="10sp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="30sp"
+                                android:src="@drawable/ic_check"
+                                android:layout_gravity="top"
+                                android:layout_height="wrap_content"/>
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/biryani"
+                                android:textColor="@android:color/black"
+                                android:textSize="14sp"
+                                android:text="80g (4 cucharadas) de leche condensada"/>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="30sp"
+                                android:src="@drawable/ic_check"
+                                android:layout_gravity="top"
+                                android:layout_height="wrap_content"/>
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/biryani"
+                                android:textSize="14sp"
+                                android:text="250 ml de agua"/>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="30sp"
+                                android:src="@drawable/ic_check"
+                                android:layout_gravity="top"
+                                android:layout_height="wrap_content"/>
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/biryani"
+                                android:textSize="14sp"
+                                android:text="2 g de harina de maíz"/>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="30sp"
+                                android:src="@drawable/ic_check"
+                                android:layout_gravity="top"
+                                android:layout_height="wrap_content"/>
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/biryani"
+                                android:textSize="14sp"
+                                android:text="1 palito de canela en rama"/>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="30sp"
+                                android:src="@drawable/ic_check"
+                                android:layout_gravity="top"
+                                android:layout_height="wrap_content"/>
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/biryani"
+                                android:textSize="14sp"
+                                android:text="1 limón"/>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="30sp"
+                                android:src="@drawable/ic_check"
+                                android:layout_gravity="top"
+                                android:layout_height="wrap_content"/>
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/biryani"
+                                android:textSize="14sp"
+                                android:text="250 g de piñones"/>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="30sp"
+                                android:src="@drawable/ic_check"
+                                android:layout_gravity="top"
+                                android:layout_height="wrap_content"/>
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/biryani"
+                                android:textSize="14sp"
+                                android:text="5 huevos"/>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="30sp"
+                                android:src="@drawable/ic_check"
+                                android:layout_gravity="top"
+                                android:layout_height="wrap_content"/>
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/biryani"
+                                android:textSize="14sp"
+                                android:text="20 g de azúcar"/>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="30sp"
+                                android:src="@drawable/ic_check"
+                                android:layout_gravity="top"
+                                android:layout_height="wrap_content"/>
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/biryani"
+                                android:textSize="14sp"
+                                android:text="1 cucharadita de sal"/>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_margin="15sp"
+                app:cardElevation="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@id/a1"
+                        android:padding="5sp"
+                        android:background="@color/themeColor"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="?attr/actionBarSize"
+                        android:orientation="horizontal">
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="60sp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/preparacion"/>
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/biryani"
+                            android:textSize="13sp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:layout_height="wrap_content"
+                            android:text="Preparación"/>
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:layout_width="45sp"
+                            android:adjustViewBounds="true"
+                            android:layout_height="match_parent"
+                            android:background="?android:selectableItemBackground"
+                            android:src="@drawable/ic_expand_more"/>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_below="@+id/a1"
+                        android:layout_width="match_parent"
+                        android:layout_margin="10sp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="40sp"
+                                android:text="1."
+                                android:fontFamily="@font/biryani"
+                                android:layout_gravity="top"
+                                android:gravity="center"
+                                android:textColor="@color/themeColor"
+                                android:textSize="14sp"
+                                android:layout_height="wrap_content">
+
+                            </com.google.android.material.textview.MaterialTextView>
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/biryani"
+                                android:textColor="@android:color/black"
+                                android:textSize="14sp"
+                                android:text="Crema de chocolate: Poner en un bol la leche condensada, el agua la harina de maíz y la yema de huevo y batir unos segundos hasta que esté todo bien mezclado."/>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="40sp"
+                                android:text="2."
+                                android:fontFamily="@font/biryani"
+                                android:layout_gravity="top"
+                                android:gravity="center"
+                                android:textColor="@color/themeColor"
+                                android:textSize="14sp"
+                                android:layout_height="wrap_content">
+
+                            </com.google.android.material.textview.MaterialTextView>
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/biryani"
+                                android:textColor="@android:color/black"
+                                android:textSize="14sp"
+                                android:text="Fundir el chocolate y mezclar hasta que esté todo bien integrado."/>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="40sp"
+                                android:text="3."
+                                android:fontFamily="@font/biryani"
+                                android:layout_gravity="top"
+                                android:gravity="center"
+                                android:textColor="@color/themeColor"
+                                android:textSize="14sp"
+                                android:layout_height="wrap_content">
+
+                            </com.google.android.material.textview.MaterialTextView>
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/biryani"
+                                android:textColor="@android:color/black"
+                                android:textSize="14sp"
+                                android:text="Añadir la ramita de canela y poner dos minutos a 800w en el microondas. Remover y poner dos minutos más."/>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="40sp"
+                                android:text="4."
+                                android:fontFamily="@font/biryani"
+                                android:layout_gravity="top"
+                                android:gravity="center"
+                                android:textColor="@color/themeColor"
+                                android:textSize="14sp"
+                                android:layout_height="wrap_content">
+
+                            </com.google.android.material.textview.MaterialTextView>
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/biryani"
+                                android:textColor="@android:color/black"
+                                android:textSize="14sp"
+                                android:text="Pasar por un colador y dejar enfriar en la nevera cubierta con papel film tocando la superficie para que no se forme piel."/>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="40sp"
+                                android:text="5."
+                                android:fontFamily="@font/biryani"
+                                android:layout_gravity="top"
+                                android:gravity="center"
+                                android:textColor="@color/themeColor"
+                                android:textSize="14sp"
+                                android:layout_height="wrap_content">
+
+                            </com.google.android.material.textview.MaterialTextView>
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/biryani"
+                                android:textColor="@android:color/black"
+                                android:textSize="14sp"
+                                android:text="Una vez fría poner en una manga pastelera con boquilla lisa."/>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_margin="15sp"
+                app:cardElevation="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@id/a1"
+                        android:padding="5sp"
+                        android:background="@color/themeColor"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="?attr/actionBarSize"
+                        android:orientation="horizontal">
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="60sp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/consejo"/>
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/biryani"
+                            android:textSize="13sp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:layout_height="wrap_content"
+                            android:text="Tip de Cocina"/>
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:layout_width="45sp"
+                            android:adjustViewBounds="true"
+                            android:layout_height="match_parent"
+                            android:background="?android:selectableItemBackground"
+                            android:src="@drawable/ic_expand_more"/>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_below="@+id/a1"
+                        android:layout_width="match_parent"
+                        android:layout_margin="10sp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:text="Espolvorear con canela en polvo y un poco de almendra crocanti para darle un sabor muy delicioso. Puedes también acompañarlo con leche de soya."
+                            android:fontFamily="@font/biryani"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            android:layout_height="wrap_content"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

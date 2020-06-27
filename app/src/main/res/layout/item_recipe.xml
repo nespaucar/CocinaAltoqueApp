@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:id="@+id/etiBook"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardRecipe"
+        android:layout_margin="15sp"
+        app:cardElevation="10sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/a1"
+                android:layout_marginTop="10sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_marginBottom="3sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="18sp"
+                        android:src="@drawable/ic_watch"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5sp"
+                        android:layout_height="18sp"/>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:textSize="11sp"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="@font/biryani_extralight"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:text="40 min"/>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10sp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="11sp"
+                        android:textColor="@android:color/black"
+                        android:layout_marginEnd="2sp"
+                        android:layout_marginRight="2sp"
+                        android:fontFamily="@font/biryani_extralight"
+                        android:text="Dificultad"/>
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="18sp"
+                        android:padding="2sp"
+                        android:src="@drawable/cucharaactiva"
+                        android:layout_height="18sp"/>
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="18sp"
+                        android:padding="2sp"
+                        android:src="@drawable/cucharaactiva"
+                        android:layout_height="18sp"/>
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="18sp"
+                        android:padding="2sp"
+                        android:src="@drawable/cucharainactiva"
+                        android:layout_height="18sp"/>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/biryani"
+                            android:gravity="end"
+                            android:text="40 votos"
+                            android:layout_marginRight="10sp"
+                            android:textColor="@android:color/black"
+                            android:textSize="11sp" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="15sp"
+                            android:layout_gravity="center"
+                            android:layout_height="15sp"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/staractive" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="15sp"
+                            android:layout_height="15sp"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/staractive" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="15sp"
+                            android:layout_gravity="center"
+                            android:layout_height="15sp"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/staractive" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="15sp"
+                            android:layout_gravity="center"
+                            android:layout_height="15sp"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/staractive" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="15sp"
+                            android:layout_gravity="center"
+                            android:layout_height="15sp"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/starinactive" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <RelativeLayout
+                android:layout_below="@+id/a1"
+                android:layout_marginBottom="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_marginLeft="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/recipeImage"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/chaufa"
+                    android:adjustViewBounds="true"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/gradient_image"/>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_alignBottom="@id/recipeImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10sp"
+                        android:layout_marginLeft="10sp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/biryani"
+                            android:text="Arroz Chaufa"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/biryani_extralight"
+                            android:text="Con carne de pollo, cerdo y mariscos"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="?android:selectableItemBackground"
+                        android:gravity="bottom"
+                        android:padding="15sp"
+                        android:src="@drawable/ic_favorite" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
